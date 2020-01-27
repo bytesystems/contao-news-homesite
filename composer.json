@@ -1,9 +1,9 @@
 {
     "name": "bytesystems/contao-news-homesite",
     "description":"Extends contao news with a homesite",
-    "keywords":["contao", "notification", "center", "inline", "css", "module", "developer", "zapier", "zap"],
-    "type": "contao-module",
-    "homepage":"https://github.com/bytesystems/contao-notification_center_gateways",
+    "keywords":["contao", "news", "home"],
+    "type": "contao-bunlde",
+    "homepage":"https://github.com/bytesystems/contao-news-homesite",
     "license":"LGPL-3.0+",
     "authors":[
         {
@@ -14,23 +14,18 @@
         }
     ],
     "support":{
-        "issues":"https://github.com/bytesystems/contao-notification_center_gateways/issues"
+        "issues":"https://github.com/bytesystems/contao-news-homesite/issues"
     },
     "require": {
-        "php": "~5.4 || ~7.0",
-        "contao/core-bundle": "^3.5.1 || ~4.1",
-        "contao-community-alliance/composer-plugin": "~2.4 || ~3.0",
-        "terminal42/notification_center": "~1.3",
-        "ext-json": "*"
-    },
-    "autoload": {
-        "classmap": [""]
+        "php": "^5.6 || ^7.0",
+        "contao/core-bundle": "^4.4 || <4.7"
     },
     "extra": {
-        "contao": {
-            "sources": {
-                "": "system/modules/notification_center_extra_gateways"
-            }
+        "contao-manager-plugin": "bits\\ContaoNewsHomesite\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "bits\\ContaoNewsHomesite\\": "src/"
         }
     }
 }
