@@ -15,5 +15,5 @@
  *
  */
 
-$GLOBALS['TL_LANG']['tl_news']['meta_title'][0] = 'Domain der Heimatseite';
-$GLOBALS['TL_LANG']['tl_news']['meta_title'][1] = 'Ändert die robots entsprechend der Heimatseite';
+$GLOBALS['TL_LANG']['tl_news']['homesite'][0] = 'Domain der Heimatseite';
+$GLOBALS['TL_LANG']['tl_news']['homesite'][1] = 'Ändert die robots entsprechend der Heimatseite';

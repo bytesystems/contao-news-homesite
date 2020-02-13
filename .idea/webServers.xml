@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="af86b1d5-771d-4e70-a4f4-d9f44813d37c" name="bytesystems1.timmeserver.de" url="http://bytesystems1.timmeserver.de">
+        <fileTransfer host="bytesystems1.timmeserver.de" port="21" rootFolder="/web/vendor/bytesystems/contao-news-homesite">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -21,6 +21,12 @@
     \Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_AFTER
 )->applyToPalette('default', 'tl_news');
 
+\Contao\CoreBundle\DataContainer\PaletteManipulator::create()->addField(
+    'secondSRC',
+    'singleSRC',
+    \Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_AFTER
+)->applyToPalette('addImage', 'tl_news');
+
 $GLOBALS['TL_DCA']['tl_news']['fields']['homesite'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_news']['homesite'],
     'exclude' => true,
@@ -33,4 +39,11 @@ $GLOBALS['TL_DCA']['tl_news']['fields']['homesite'] = [
         'tl_class' => 'w50',
     ],
     'sql' => "varchar(255) NOT NULL default ''",
+];
+$GLOBALS['TL_DCA']['tl_news']['fields']['secondSRC'] = [
+    'label'                   => &$GLOBALS['TL_LANG']['tl_content']['singleSRC'],
+    'exclude'                 => true,
+    'inputType'               => 'fileTree',
+    'eval'                    => array('fieldType'=>'radio', 'filesOnly'=>true, 'extensions'=>Contao\Config::get('validImageTypes'), 'mandatory'=>true),
+    'sql'                     => "binary(16) NULL"
 ];

@@ -41,8 +41,10 @@ class NewsHomesite extends Frontend
         }
 
         if ($news->homesite == $objPage->domain) {
-            $objPage->pageTitle = "TREFFER";
+            $objPage->canonical = "TREFFER";
         }
-
+        else{
+            $objPage->canonical = "KEIN_TREFFER";
+        }
     }
 }
