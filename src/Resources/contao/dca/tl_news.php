@@ -1,5 +1,4 @@
 <?php
-
 /*
  * This file is part of bytesystems/contao-news-homesite
  *
@@ -15,17 +14,18 @@
  *
  */
 
-\Contao\CoreBundle\DataContainer\PaletteManipulator::create()->addField(
+use \Contao\CoreBundle\DataContainer\PaletteManipulator;
+PaletteManipulator::create()->addField(
     'homesite',
     'alias',
-    \Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_AFTER
+    PaletteManipulator::POSITION_AFTER
 )->applyToPalette('default', 'tl_news');
 
-\Contao\CoreBundle\DataContainer\PaletteManipulator::create()->addField(
+PaletteManipulator::create()->addField(
     'secondSRC',
     'singleSRC',
-    \Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_AFTER
-)->applyToPalette('addImage', 'tl_news');
+    PaletteManipulator::POSITION_AFTER
+)->applyToSubpalette('addImage', 'tl_news');
 
 $GLOBALS['TL_DCA']['tl_news']['fields']['homesite'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_news']['homesite'],
